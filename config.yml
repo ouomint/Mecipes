@@ -1,0 +1,27 @@
+Recipes:
+  twostone:
+    type: 'shaped'
+    ingredients:
+    - 'a;1'
+    - 'b;2'
+    form:
+    - 'aba'
+    - 'bab'
+    - 'aba'
+    result: 1
+    qty: 2
+  shapele:
+    type: 'shapeless'
+    ingredients:
+    - '1'
+    - '2'
+    result: 2
+    qty: 2
+#Recipes Example
+#twostone - Name of your Recipe
+#type - type of your recipe, shaped or shapeless
+#ingredients - Ingredients of your Recipe, If you want to set Grass block to B, add the ingredients looks like 'B;2'
+# - If Shapeless, just add Item ID
+#form - Form of your recipe, If shapeless, fill out in a line.
+#result - Result item of your recipe, Item ID:Data
+#qty - Quantity of your recipe
