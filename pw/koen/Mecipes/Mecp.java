@@ -13,7 +13,7 @@ import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class MethaneGas extends JavaPlugin implements Listener {
+public class MethaneGas extends JavaPlugin {
 	@SuppressWarnings("deprecation")
 	@Override
 	public void onEnable() {
@@ -21,17 +21,17 @@ public class MethaneGas extends JavaPlugin implements Listener {
 		ConfigurationSection cs = this.getConfig().getConfigurationSection("Recipes");
 		for (String k:cs.getKeys(false)) {
 			String n = k;
-			// ·¹½ÃÇÇ ÀÌ¸§ RQ //
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ RQ //
 			String t = this.getConfig().getString("Recipes."+k+".type").toLowerCase();
-			// ·¹½ÃÇÇ ÇüÅÂ RQ; SHAPED,SHAPELESS //
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ RQ; SHAPED,SHAPELESS //
 			int r = this.getConfig().getInt("Recipes."+k+".result");
-			// ·¹½ÃÇÇ °á°ú¹° RQ //
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ RQ //
 			int q = this.getConfig().getInt("Recipes."+k+".qty");
-			// ·¹½ÃÇÇ °á°ú¹° ¼ö·® RQ //
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ RQ //
 			List<?> i = this.getConfig().getList("Recipes."+k+".ingredients");
-			// ·¹½ÃÇÇ ¼ººÐ RQ; SHAPED½Ã'CHAR;ITEM ID'SHAPELESS½Ã'ITEM ID' //
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ RQ; SHAPEDï¿½ï¿½'CHAR;ITEM ID'SHAPELESSï¿½ï¿½'ITEM ID' //
 			List<?> f = this.getConfig().getList("Recipes."+k+".form");
-			// ·¹½ÃÇÇ ÇüÅÂ; SHAPED RQ //
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½; SHAPED RQ //
 			if(t.contains("shapeless")) {
 				ShapelessRecipe sr = new ShapelessRecipe(new ItemStack(Material.getMaterial(r), q));
 				Iterator<?> er = i.iterator();
