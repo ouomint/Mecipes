@@ -21,17 +21,17 @@ public class MethaneGas extends JavaPlugin {
 		ConfigurationSection cs = this.getConfig().getConfigurationSection("Recipes");
 		for (String k:cs.getKeys(false)) {
 			String n = k;
-			// ������ �̸� RQ //
+			// 레시피 이름 RQ //
 			String t = this.getConfig().getString("Recipes."+k+".type").toLowerCase();
-			// ������ ���� RQ; SHAPED,SHAPELESS //
+			// 레시피 형태 RQ; SHAPED,SHAPELESS //
 			int r = this.getConfig().getInt("Recipes."+k+".result");
-			// ������ ����� RQ //
+			// 레시피 결과물 RQ //
 			int q = this.getConfig().getInt("Recipes."+k+".qty");
-			// ������ ����� ���� RQ //
+			// 레시피 결과물 수량 RQ //
 			List<?> i = this.getConfig().getList("Recipes."+k+".ingredients");
-			// ������ ���� RQ; SHAPED��'CHAR;ITEM ID'SHAPELESS��'ITEM ID' //
+			// 레시피 성분 RQ; SHAPED시'CHAR;ITEM ID'SHAPELESS시'ITEM ID' //
 			List<?> f = this.getConfig().getList("Recipes."+k+".form");
-			// ������ ����; SHAPED RQ //
+			// 레시피 형태; SHAPED RQ //
 			if(t.contains("shapeless")) {
 				ShapelessRecipe sr = new ShapelessRecipe(new ItemStack(Material.getMaterial(r), q));
 				Iterator<?> er = i.iterator();
