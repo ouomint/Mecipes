@@ -12,7 +12,7 @@ import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class MethaneGas extends JavaPlugin {
+public class Mecp extends JavaPlugin {
 	@SuppressWarnings("deprecation")
 	@Override
 	public void onEnable() {
